@@ -1,0 +1,129 @@
+<!DOCTYPE html >
+<html xmlns = " http://www.w3.org/1999/xhtml">
+
+     <head>
+
+         <title>students degrees average</title>
+
+     </head>
+
+     <body>
+
+         <form>
+
+         <table border = "border" align ="center">
+
+         <script type = "text/javaScript">
+
+                 var stud = prompt("enter number of students:");
+				 
+                 var cul = prompt("enter number of studying subjects");
+				 
+                 var ca=stud*cul;
+				 
+                 var deg=new Array(ca);
+				 
+                 var a=0;
+
+                 var k=ca;
+
+                 var cal=0;
+
+                 var ave;
+
+                 var d=k;
+
+                 document.write("</tbody>");
+				 
+                 document.write("<caption>");
+				 
+                 document.write("<b><h3>Note:after you enter the student degree and before u move for your next student to enter his degree please press calculate averag</h3></b>");
+				 
+                 document.write("</caption>");
+				 
+                 document.write("<thead>");
+				 
+                 document.write("<tr>");
+				 
+                 document.write("<th>");
+				 
+                 document.write("student name");
+				 
+                 document.write("</th>");
+
+				 for(m=1;m<=cul;m++)
+				 {
+
+					 document.write("<th>");
+					 
+					 document.write(prompt("subject name:"));
+					 
+					 document.write("</th>");
+
+				 }
+				 document.write("<th>");
+				 
+				 document.write("average");
+				 
+				 document.write("</th>");
+
+				 document.write("</tr>");
+
+				 document.write("</thead>");
+
+				 document.write("<tbody>");
+
+				 for(i=1;i<=stud;i++)
+				 {
+
+					 document.write("<tr>");
+					 
+					 document.write("<td>");
+
+					 document.write("<b>");
+
+					 document.write(i);
+
+					 document.write(".");
+
+					 document.write("</b>");
+
+					 document.write("<input type =textbox size=20 />");
+
+					 document.write("</td>");
+
+					 for(j=0;j<cul;j++)
+					 {
+
+						 document.write("<td>");
+						 
+						 document.write("<input type =textbox size=3 id="+a+" onchange=deg[a]=document.getElementById("+a+").value;cal=cal+parseFloat(deg[a]); />");
+						 
+						 document.write("</td>");
+						 
+						 a=a+1;
+						 
+					 }
+					 document.write("<td>");
+					 
+					 document.write("<input type =textbox size=3 id="+k+" />");
+					 
+					 k=k+1;
+					 document.write("</td>");
+					 document.write("<td>");
+					 document.write("<input type=button value=calculate&nbsp;average onclick=ave=cal/cul;document.getElementById("+d+").value=ave;ave=0;cal=0; />");
+					 d=d+1;
+					 document.write("</td>");
+					 document.write("</tr>")
+
+				 }
+
+		 </script>
+
+		 </table>
+
+		 </form>
+
+	</body>
+
+</html>
